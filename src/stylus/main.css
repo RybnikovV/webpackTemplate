@@ -4,15 +4,3 @@
 body {
     font-family: 'Roboto', sans-serif;
 }
-
-.container {
-    padding-bottom: 2px;
-    width: 400px;
-    height: 400px;
-    background-image: url("../assets/webpack-logo.png");
-    background-size: 100%;
-}
-
-h1 {
-    color: blue
-}
