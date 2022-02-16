@@ -22,7 +22,7 @@ const optimization = () => {
         ];
     };
 
-    return config;
+    return config
 }
 
 const filename = ext => {
@@ -70,7 +70,6 @@ module.exports = {
             template: './index.html',
             minify: {
                 collapseWhitespace: !isDev
-                // collapseWhitespace: false
             }
         }),
         new CleanWebpackPlugin(),
@@ -123,12 +122,18 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(png|jpg|svg|gif)$/,
-                use: ['file-loader']
+                test: /\.(png|jpg|jpeg|svg|gif)$/,
+                loader: 'file-loader',
+                options: {
+                    outputPath: 'img'
+                }
             },
             {
                 test: /\.(ttf|woff|woff2|eot)$/,
-                use: ['file-loader']
+                loader: 'file-loader',
+                options: {
+                    outputPath: 'fonts'
+                }
             },
         ]
     }
